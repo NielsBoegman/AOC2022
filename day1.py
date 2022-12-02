@@ -9,4 +9,4 @@ for line in sys.stdin:
         currentelf=0
 elves.sort()
 
-print("\n",elves[-1] + elves[-2] + elves[-3])
+print("\n Part 1:", elves[-1], "\n Part 2:",elves[-1] + elves[-2] + elves[-3])

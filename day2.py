@@ -37,5 +37,3 @@ score =0
 for round in game:
     score += detectWin(round)
 print(score)
-
-

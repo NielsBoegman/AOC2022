@@ -6,20 +6,13 @@ for line in sys.stdin:
     data.append([int(x) for x in temp])
 
 def between(test, low, high):
-    if test>=low and test <= high:
-        return True
-    else: return False
+    return test>=low and test <= high
 
 def part1():
     count=0
     for ass in data:
-        if ass[0]>=ass[2] and ass[1]<=ass[3]:
+        if (ass[0]>=ass[2] and ass[1]<=ass[3]) or (ass[0]<= ass[2] and ass[1]>=ass[3]):
             count+=1
-            continue
-        elif ass[0]<= ass[2] and ass[1]>=ass[3]:
-            count+=1
-            continue
-        else: continue
     return count
 
 def part2():

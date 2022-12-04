@@ -1,2 +1,2 @@
-x ="ABC"
-print(ord(x[1]))
+x =int("34\n")
+print(x)

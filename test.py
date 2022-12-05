@@ -1,2 +1,4 @@
-x =int("34\n")
-print(x)
+x="succ"
+y="eed"
+final = x+y
+print(final)

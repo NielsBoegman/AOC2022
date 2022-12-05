@@ -6,7 +6,7 @@ for line in sys.stdin:
     data.append([int(x) for x in temp])
 
 def between(test, low, high):
-    return test>=low and test <= high
+    return test in range(low,high+1)
 
 def part1():
     count=0

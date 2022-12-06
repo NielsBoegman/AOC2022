@@ -7,17 +7,11 @@ def checkChars(s):
                 return False
     return True
 
-def part1():
-    for x in range(3, len(data)):
-        if checkChars(data[x-3]+data[x-2]+data[x-1]+data[x]):
-            return x+1
-        else: continue
-
-def part2():
-    for x in range(13, len(data)):
+def part(checksize):
+    for x in range(checksize, len(data)):
         temp = ""
-        for y in range(x-13,x+1):
+        for y in range(x-checksize,x+1):
             temp += data[y]
         if(checkChars(temp)):
             return y+1
-print("Part1: ", part1(), "Part2: ", part2())
+print("Part1: ", part(3), "Part2: ", part(13))

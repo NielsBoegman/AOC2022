@@ -1,4 +1,4 @@
 x="succ"
 y="eed"
-final = x+y
-print(final)
+z = "succ"
+print(x==y, x==z)

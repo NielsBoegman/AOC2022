@@ -21,7 +21,6 @@ for line in sys.stdin:
         elif data[1] == "cd":
             if not data[2] == "..":
                 for i in range(len(current.dirs)):
-                    print(current.dirs[1])
                     if current.dirs[i].name == data[2]:
                         current = current.dirs[i]
             else: current = current.parent

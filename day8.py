@@ -3,8 +3,9 @@ forest = []
 bos = []
 for line in sys.stdin:
     line = line.strip()
-    forest.append([[int(x),False ]for x in line])
-    bos.append([[int(x),1] for x in line])
+    if not len(line) == 0:
+        forest.append([[int(x),False ]for x in line])
+        bos.append([[int(x),1] for x in line])
 
 def setEdges():
     for y in range(len(forest)):

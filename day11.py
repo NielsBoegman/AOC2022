@@ -45,13 +45,15 @@ for i in range(20):
 part1 = activity[-1] * activity[-2]
 for x in range(len(activity)):
     activity[x] = 0
-
+lcm = 1
+for number in divisor:
+    lcm *= number
 for i in range(10000):
     for x in range(len(monkeys)):
         for item in monkeys[x]:
             activity[x]+=1
             temp = operations[x](item)
-            temp = temp % 9699690
+            temp = temp % lcm
             if temp%divisor[x] == 0:
                 monkeys[passes[x][0]].append(temp)
             else:
